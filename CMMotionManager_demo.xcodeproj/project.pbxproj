@@ -14,6 +14,11 @@
 		E2F9FDAD1E2E00CC00E5FEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F9FDAB1E2E00CC00E5FEED /* LaunchScreen.storyboard */; };
 		E2F9FDB81E2E00CC00E5FEED /* CMMotionManager_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9FDB71E2E00CC00E5FEED /* CMMotionManager_demoTests.swift */; };
 		E2F9FDC31E2E00CC00E5FEED /* CMMotionManager_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9FDC21E2E00CC00E5FEED /* CMMotionManager_demoUITests.swift */; };
+		E2F9FDD11E2E038000E5FEED /* ProximityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9FDD01E2E038000E5FEED /* ProximityViewController.swift */; };
+		E2F9FDD31E2E075D00E5FEED /* CoreMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9FDD21E2E075D00E5FEED /* CoreMotionViewController.swift */; };
+		E2F9FDD61E2E08E300E5FEED /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F9FDD51E2E08E300E5FEED /* CoreMotion.framework */; };
+		E2F9FDD81E2E105800E5FEED /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9FDD71E2E105800E5FEED /* ShakeViewController.swift */; };
+		E2F9FDDA1E2E106D00E5FEED /* StepCountingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9FDD91E2E106D00E5FEED /* StepCountingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		E2F9FDBE1E2E00CC00E5FEED /* CMMotionManager_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMMotionManager_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F9FDC21E2E00CC00E5FEED /* CMMotionManager_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMMotionManager_demoUITests.swift; sourceTree = "<group>"; };
 		E2F9FDC41E2E00CC00E5FEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F9FDD01E2E038000E5FEED /* ProximityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityViewController.swift; sourceTree = "<group>"; };
+		E2F9FDD21E2E075D00E5FEED /* CoreMotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreMotionViewController.swift; sourceTree = "<group>"; };
+		E2F9FDD51E2E08E300E5FEED /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		E2F9FDD71E2E105800E5FEED /* ShakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
+		E2F9FDD91E2E106D00E5FEED /* StepCountingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCountingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F9FDD61E2E08E300E5FEED /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +92,7 @@
 				E2F9FDB61E2E00CC00E5FEED /* CMMotionManager_demoTests */,
 				E2F9FDC11E2E00CC00E5FEED /* CMMotionManager_demoUITests */,
 				E2F9FDA01E2E00CC00E5FEED /* Products */,
+				E2F9FDD41E2E08E300E5FEED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +111,10 @@
 			children = (
 				E2F9FDA21E2E00CC00E5FEED /* AppDelegate.swift */,
 				E2F9FDA41E2E00CC00E5FEED /* ViewController.swift */,
+				E2F9FDD01E2E038000E5FEED /* ProximityViewController.swift */,
+				E2F9FDD21E2E075D00E5FEED /* CoreMotionViewController.swift */,
+				E2F9FDD71E2E105800E5FEED /* ShakeViewController.swift */,
+				E2F9FDD91E2E106D00E5FEED /* StepCountingViewController.swift */,
 				E2F9FDA61E2E00CC00E5FEED /* Main.storyboard */,
 				E2F9FDA91E2E00CC00E5FEED /* Assets.xcassets */,
 				E2F9FDAB1E2E00CC00E5FEED /* LaunchScreen.storyboard */,
@@ -123,6 +139,14 @@
 				E2F9FDC41E2E00CC00E5FEED /* Info.plist */,
 			);
 			path = CMMotionManager_demoUITests;
+			sourceTree = "<group>";
+		};
+		E2F9FDD41E2E08E300E5FEED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2F9FDD51E2E08E300E5FEED /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F9FDD11E2E038000E5FEED /* ProximityViewController.swift in Sources */,
 				E2F9FDA51E2E00CC00E5FEED /* ViewController.swift in Sources */,
 				E2F9FDA31E2E00CC00E5FEED /* AppDelegate.swift in Sources */,
+				E2F9FDD31E2E075D00E5FEED /* CoreMotionViewController.swift in Sources */,
+				E2F9FDDA1E2E106D00E5FEED /* StepCountingViewController.swift in Sources */,
+				E2F9FDD81E2E105800E5FEED /* ShakeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
